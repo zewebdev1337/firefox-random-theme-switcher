@@ -30,4 +30,10 @@ function getRandomTheme(themes) {
   browser.browserAction.onClicked.addListener(() => {
     setRandomTheme();
   });
-      
+  
+  // Listen for the command
+  browser.commands.onCommand.addListener((command) => {
+    if (command === "toggle-theme") {
+      setRandomTheme();
+    }
+  });

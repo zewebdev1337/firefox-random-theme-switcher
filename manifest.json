@@ -1,23 +1,30 @@
 {
-    "manifest_version": 2,
-    "name": "Random Theme Switcher",
-    "version": "1.1",
-    "description": "Switches to a random theme from the user's installed themes.",
-    "permissions": [
-      "theme",
-      "management"
-    ],
-    "browser_action": {
-      "default_icon": {
-        "48": "icons/icon-48.png"
-      },
-      "default_title": "Random Theme Switcher"
-    },
-    "background": {
-      "scripts": ["background.js"]
-    },
-    "icons": {
-      "48": "icons/icon-48.png"
+  "manifest_version": 2,
+  "name": "Random Theme Switcher",
+  "version": "1.2",
+  "description": "Switches to a random theme from the user's installed themes.",
+  "permissions": [
+    "theme",
+    "management"
+  ],
+  "commands": {
+    "toggle-theme": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+R"
+      },          
+      "description": "Toggle the theme"
     }
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/icon-48.png"
+    },
+    "default_title": "Random Theme Switcher"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "icons": {
+    "48": "icons/icon-48.png"
   }
-  
+}
